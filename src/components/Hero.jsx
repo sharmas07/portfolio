@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/Hero.css';
-import profileImage from '../assets/profile.png';
 import profileMob from '../assets/profile-mob.jpg'
 import profileDes from '../assets/profile-des.jpg'
 
