@@ -1,0 +1,143 @@
+.header {
+    background-color: #fede1c;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-links-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links a {
+    position: relative; /* Add position relative */
+    color: #000;
+    text-decoration: none;
+    font-weight: 800;
+    transition: color 0.3s ease;
+    padding: 0.5rem;
+    margin: 1rem;
+  }
+
+  /* mobile view nav links */
+  .nav-links-mobile a {
+    position: relative; /* Add position relative */
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+    transition: color 0.3s ease;
+    padding: 0.5rem;
+    margin: 1rem;
+  }
+  
+.namelogo{
+    font-size: 2.3rem;
+    font-weight: 900;
+    margin: 0;
+
+}
+  
+  .nav-links a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transform: scaleX(0); /* Start with no underline */
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-links a:hover::before {
+    transform: scaleX(1); /* Expand underline on hover */
+  }
+  .nav-links-mobile a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transform: scaleX(0); /* Start with no underline */
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-links-mobile a:hover::before {
+    transform: scaleX(1); /* Expand underline on hover */
+  }
+  
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+ 
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 222px;
+    background-color: black;
+    z-index: 9999;
+  }
+  
+  .app.sidebar-open {
+    overflow-x: hidden;
+  }
+  .app.sidebar-open .sidebar {
+    transform: translateX(0);
+    transition: transform 1s ease-in-out;
+  }
+  
+  
+  @media (max-width: 520px) {
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: #007BFF;
+      padding: 20px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-links.open {
+      display: flex;
+    }
+  
+    .nav-links a {
+      margin-bottom: 10px;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  }
+  
